@@ -1,7 +1,18 @@
 import React from 'react'
 import {StyleSheet, Text, View, FlatList, TouchableOpacity, SafeAreaView} from 'react-native'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-const Data = [
+function SettingsScreen ({
+  return (
+  <View style={styles.centerContainer}>
+  <Text style={styles.header}>Página de Configurações</Text>
+  <Text>Aqui vocẽ pode ajustar as preferência do app.</Text>
+  </View>
+  );
+}
+function HomeScreen({ navigation }){
+const DATA = [
 {id: '1', title: 'Configuração'},
 {id: '2', title: 'Perfil'},
 {id: '3', title: 'Mensagem'},
@@ -9,25 +20,41 @@ const Data = [
 {id: '5', title: 'Ajuda'}
 ];
 
-export default function App () {
-const renderItem = ({item}) => (
+const renderItem = ({ item }) => (
 <TouchableOpacity
-style = {style.button}
-onPress = {() => alert (`Você clicou em: ${item.title}`)}>
+style={style.button}
+onPress = {()=> {
+  if (item.id ==='1') {
+    navigation.navigate('Settings');
+  } else {
+    alert('Você clicou em: $()item.title}');
+  }
+}}
+  >
 <Text style = {style.buttonText}>{item.title}</Text>
-</TouchableOpacity >);
+</TouchableOpacity>
+  );
 
 return (
 <SafeAreaView style = {style.container}>
 <Text style = {style.header}> Menu Principal </Text>
 <FlatList
-data = {Data}
+data = {DATA}
 renderItem = {renderItem}
 keyExtractor = {item => item.id}
 contentContainerStyle = {style.listPadding}/>
 </SafeAreaView >
 );
 }
+const Stack = createStackNavigator();
+
+export default function App(){
+  return(
+    <NavigationContainer>
+    <Stack.Navigator initialRouteName ="Home">
+    <Stack.Screen
+  name="Home"
+  component={Setting
 
 const style = StyleSheet.create({
 container: {
