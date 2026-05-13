@@ -1,5 +1,5 @@
 {
-"rewritea" : [
-  {"source": "/(.*)", "destination": "/inde.html"}
-]
+  "rewrites" : [
+    {"source": "/(.*)", "destination": "/inde.html"}
+  ]
 }
