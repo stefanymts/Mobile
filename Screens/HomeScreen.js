@@ -125,7 +125,7 @@ const RECEITAS_INICIAIS = [
  "3. Mexa até engrossar.",
  "4. Despeje sobre o bolo e finalize com granulado."
 ]}, 
- videoUrl: 'https://raw.githubusercontent.com/stefanymts_/Mobile/main/videos/brownie.mp4?raw=true' 
+ videoUrl: 'https://raw.githubusercontent.com/stefanymts_/Mobile/main/videos/bolo_cenoura.mp4?raw=true' 
  },
  { 
  id: "4", 
