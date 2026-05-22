@@ -44,7 +44,7 @@ const RECEITAS_INICIAIS = [
  "6. Modele bolinhas e coloque na assadeira.",
  "7. Asse em forno médio até dourar."
  ]}, 
- videoUrl: 'https://raw.githubusercontent.com/stefanymts_/Mobile/main/videos/pao_queijo.mp4?raw=true'
+ videoUrl: 'https://raw.githubusercontent.com/stefanymts/Mobile/main/videos/pao_queijo.mp4?raw=true'
  },
  { 
  id: "2", 
@@ -84,7 +84,7 @@ const RECEITAS_INICIAIS = [
  "5. Misture até formar uma massa homogênea.",
  "6. Coloque na forma untada e leve ao forno médio por cerca de 30 minutos."
  ]}, 
- videoUrl: 'https://raw.githubusercontent.com/stefanymts_/Mobile/main/videos/brownie.mp4?raw=true' 
+ videoUrl: 'https://raw.githubusercontent.com/stefanymts/Mobile/main/videos/brownie.mp4?raw=true' 
  },
  { 
  id: "3", 
@@ -125,7 +125,7 @@ const RECEITAS_INICIAIS = [
  "3. Mexa até engrossar.",
  "4. Despeje sobre o bolo e finalize com granulado."
 ]}, 
- videoUrl: 'https://raw.githubusercontent.com/stefanymts_/Mobile/main/videos/bolo_cenoura.mp4?raw=true' 
+ videoUrl: 'https://raw.githubusercontent.com/stefanymts/Mobile/main/videos/bolo_cenoura.mp4?raw=true' 
  },
  { 
  id: "4", 
@@ -163,7 +163,7 @@ const RECEITAS_INICIAIS = [
  "5. Coloque sobre a massa já fria.",
  "6. Leve à geladeira até firmar."
  ]}, 
- videoUrl: 'https://raw.githubusercontent.com/stefanymts_/Mobile/main/videos/torta_limao.mp4?raw=true' 
+ videoUrl: 'https://raw.githubusercontent.com/stefanymts/Mobile/main/videos/torta_limao.mp4?raw=true' 
 },
 ]
 
@@ -174,7 +174,7 @@ const [carregando, setCarregando] = useState(false);
 const sincronizarReceitas = async () => {
 setCarregando(true);
 try {
-const response = await fetch('https://raw.githubusercontent.com/stefanymts_/Mobile/refs/heads/main/receitas.json?raw=true');
+const response = await fetch('https://raw.githubusercontent.com/stefanymts/Mobile/refs/heads/main/receitas.json?raw=true');
 const receitasDoServidor = await response.json();
 const novas = receitasDoServidor.filter(resServidor => !receitas.some(resLocal => resLocal.id === resServidor.id));
 
